@@ -1,6 +1,6 @@
 # toDoApp
 
-[Live Demo](https://rawcdn.githack.com/0yapunpun/RestaurantPage/8df1e97484b469d0c67dd59d362709fc706d09c7/dist/index.html)
+[Live Demo](https://rawcdn.githack.com/0yapunpun/toDoApp/6cf6098f3c9790f974a830738a141d1efe1a25b9/index.html)
 
 ## Description
 To do app make with JavaScript, CSS and HTML. It's possible to create assignments represented in tables and in each table add varius tasks.
