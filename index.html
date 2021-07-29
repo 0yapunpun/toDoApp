@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="normalize.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="content">
+
+    <div class="tittle">To Do</div>
+    
+    <div class="asideLeft" onclick="createassignment()">+
+      <div class="displayHover">
+        Add new assignment
+      </div>
+    </div>
+
+    <div class="mainContent">
+      <div class="overflowContent">
+
+        <!-- Asiggnment "general" by default-->
+        <div class="assignment" id="assigment1">
+          <div class="headerAssigment">
+            <div class="assignmentName">General tasks</div>
+            <div class="addToDo" onclick="createTask('taskGeneral')">+
+              <div class="displayHoverTask">Create new task</div>
+            </div>
+          </div>
+
+          <!-- Task -->
+          <div class="toDo" id="taskGeneralContainer">
+<!--       <div class="checkboxContainer">
+              <div class="checkBox" id="checkBox0" onclick="toggleCheckbox(0)"></div>
+              <div >Sacar al perro</div>
+            </div>
+          </div>-->
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="tag">Made by San &copy:2021</div>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
