@@ -7,14 +7,14 @@ To do app make with JavaScript, CSS and HTML. It's possible to create assignment
 By default it's stablished the assignment called General tasks. THe data of the assignmets and the tasks it's stored in the LocalStorage.
 
 ## Features
-* Creation of assignment taks.
-* Creation of checkbox items
-* LocalStorage as database.
-* Responsive design 
+* Visual track of assignments and tasks.
+* Save information in LocalStorage.
+* Responsive design. 
 
 
 ## Built With
 * HTML
 * CSS
 * JavaScript
+* Webpack
 
