@@ -20,7 +20,7 @@
 
     <div class="tittle">To Do</div>
     
-    <div class="asideLeft" onclick="createassignment()">+
+    <div class="asideLeft" id="createassigbut" >+
       <div class="displayHover">
         Add new assignment
       </div>
@@ -32,16 +32,15 @@
         <!-- Asiggnment "general" by default-->
         <div class="assignment" id="assigment1">
           <div class="headerAssigment">
-            <div class="assignmentName">General tasks</div>
-            <div class="addToDo" onclick="createTask('taskGeneral')">+
-              <div class="displayHoverTask">Create new task</div>
+            <div class="assignmentName">General</div>
+            <div class="addToDo" id="createTaskbut">+<div class="displayHoverTask">Create new task</div>
             </div>
           </div>
-
           <!-- Task -->
           <div class="toDo" id="taskGeneralContainer">
 <!--       <div class="checkboxContainer">
               <div class="checkBox" id="checkBox0" onclick="toggleCheckbox(0)"></div>
+               <div class="deletebox" ></div>
               <div >Sacar al perro</div>
             </div>
           </div>-->
@@ -54,6 +53,6 @@
   </div>
 
   <div id="tag">Made by San &copy:2021</div>
-  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
