@@ -3,6 +3,7 @@
   --clr2: #5D8233;
   --clr3: #284E78;
   --clr4: #3E215D;
+  --clr5: #95450F;
 }
 
 .content{
@@ -84,9 +85,10 @@
   height: 400px;
   margin-left: 30px;
   background-color: var(--clr2);
-  border: solid 2px var(--clr3);
+  border: dotted 3px var(--clr3);
   border-radius: 5px;
   margin-bottom: 5px;
+  position: relative;
 }
 
 .headerAssigment{
@@ -111,7 +113,7 @@
   height: 40px;
   margin: 5px;
   border-radius: 50%;
-  background-color: var(--clr4);
+  background-color: var(--clr3);
   color: white;
   font-size: 30px;
   font-weight: 800;
@@ -200,8 +202,8 @@
   height: 30px;
   text-align: center;
   line-height: 30px;
-  right: 30px;
-  top: 30px;
+  right: 58px;
+  top: 15px;
   position: absolute;
   border-radius: 5px;
   background-color: var(--clr3);
@@ -217,11 +219,10 @@
   font-size: 15px;
   font-weight: 700;
   font-family: 'Lobster', cursive;
-
 }
 
 
-/* Delete button */
+/* Delete buttons */
 .deleteBox{
   width: 20px;
   height: 20px;
@@ -236,4 +237,21 @@
   position: absolute;
   left: 95%;
   bottom: 30px;
+}
+
+.deleteAssignment{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--clr4);
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  left: 93%;
+  bottom: 95.5%;
 }
