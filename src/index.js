@@ -29,6 +29,7 @@ if (!("taskGeneral" in localStorage)) {
         chargeTask(key, parsedObj[keyTask], contador);
       } 
 
+    //Similar proces for the other assignments, but generating it with a function
     } else{
       chargeAssigmentContainer(key);
       let parsedObj = JSON.parse(value),

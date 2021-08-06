@@ -1,6 +1,6 @@
 import {saveTask} from './localStorageFunction';
 import {addId} from './idManipulation';
-import {removeElement} from './removeElements';
+import {removeElement, removeAssignment} from './removeElements';
 
 // Create asiggnment
 let createassignment = () =>{
@@ -32,7 +32,8 @@ let createassignment = () =>{
       addTaskButton = document.createElement('div'),
       taskButtonHover = document.createElement('div'),
       assigmentTasks = document.createElement('div'),
-      container = document.querySelector(".overflowContent");
+      container = document.querySelector(".overflowContent"),
+      deletebox = document.createElement('div');
 
   // Add classes to elements
   assigmentContainer.classList.add("assignment");
@@ -42,8 +43,11 @@ let createassignment = () =>{
   addTaskButton.classList.add("addToDo");
   taskButtonHover.classList.add("displayHoverTask")
   assigmentTasks.classList.add("toDo");
+  deletebox.classList.add("deleteAssignment");
 
-  // Add button textcontent and function
+  // Add button text content and function
+  deletebox.innerText += "x";
+  deletebox.onclick = removeAssignment;
   addTaskButton.textContent = "+";
   taskButtonHover.textContent = "Create new task";
   addTaskButton.appendChild(taskButtonHover);
@@ -56,7 +60,8 @@ let createassignment = () =>{
   assigmentHeader.appendChild(assigmentName);
   assigmentHeader.appendChild(addTaskButton);
   assigmentContainer.appendChild(assigmentHeader);
-  assigmentContainer.appendChild(assigmentTasks);  
+  assigmentContainer.appendChild(assigmentTasks); 
+  assigmentContainer.appendChild(deletebox); 
   container.appendChild(assigmentContainer);
 }
 

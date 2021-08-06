@@ -1,6 +1,6 @@
 import {chargeId } from './idManipulation';
 import {createTask} from './addItems';
-import {removeElement} from './removeElements';
+import {removeElement, removeAssignment} from './removeElements';
 
 // Charge assignmet containers from local storage
 let chargeAssigmentContainer = (assigmnentName) =>{
@@ -12,7 +12,8 @@ let chargeAssigmentContainer = (assigmnentName) =>{
       addTaskButton = document.createElement('div'),
       taskButtonHover = document.createElement('div'),
       assigmentTasks = document.createElement('div'),
-      container = document.querySelector(".overflowContent");
+      container = document.querySelector(".overflowContent"),
+      deletebox = document.createElement('div');
 
   // Add classes to elements
   assigmentContainer.classList.add("assignment");
@@ -20,13 +21,18 @@ let chargeAssigmentContainer = (assigmnentName) =>{
   assigmentName.classList.add("assignmentName");
   assigmentName.textContent = assigmnentName;
   addTaskButton.classList.add("addToDo");
-  taskButtonHover.classList.add("displayHoverTask")
+  taskButtonHover.classList.add("displayHoverTask");
   assigmentTasks.classList.add("toDo");
+  deletebox.classList.add("deleteAssignment");
 
   // Add button content 
+  deletebox.innerText += "x"; 
   addTaskButton.textContent = "+";
   taskButtonHover.textContent = "Create new task";
   addTaskButton.appendChild(taskButtonHover);
+
+  // Add fucntion to delete button
+  deletebox.onclick = removeAssignment;
   
   // Add Assigment function onclick and id
   addTaskButton.onclick = createTask.bind(this, assigmnentName);
@@ -37,6 +43,7 @@ let chargeAssigmentContainer = (assigmnentName) =>{
   assigmentHeader.appendChild(addTaskButton);
   assigmentContainer.appendChild(assigmentHeader);
   assigmentContainer.appendChild(assigmentTasks);  
+  assigmentContainer.appendChild(deletebox);
   container.appendChild(assigmentContainer);
 
 }
