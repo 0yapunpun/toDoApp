@@ -4,7 +4,7 @@
 
 ## Description
 To do app make with JavaScript, CSS and HTML. It's possible to create assignments represented in tables, and in each table, add varius tasks.
-By default it's stablished an assignment called General tasks. The data of the assignmets and the tasks it's stored in the LocalStorage. Each time the page is recharged the page it's generated from the localStorage information.
+By default it's stablished an assignment called General tasks. The data of the assignmets and the tasks it's stored in the LocalStorage. Each time is recharged the page it's generated from the localStorage information.
 
 ## Features
 * Visual track of assignments and tasks.
