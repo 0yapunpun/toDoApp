@@ -1,9 +1,10 @@
 :root{
-  --clr1: #ECD662;
-  --clr2: #5D8233;
-  --clr3: #284E78;
-  --clr4: #3E215D;
-  --clr5: #95450F;
+  --clr1: #FFE6E7;
+  --clr2: #E05D5D;
+  --clr2-1: #FFB344;
+  --clr3: #00A19D;
+  --clr4: #00A19D;
+  --clr6: #5E2122;
 }
 
 .content{
@@ -22,10 +23,8 @@
   top: 5%;
   color: var(--clr4);
   font-family: 'Lobster', cursive;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 700;
-  border-bottom: dotted 3px var(--clr4);
-
 }
 
 .asideLeft{
@@ -47,6 +46,7 @@
 .mainContent{
   width: 100vw;
   height: 100vh;
+  padding-top: 5%;
   background-color: var(--clr1);
   display: flex;
   justify-content: center;
@@ -55,14 +55,15 @@
 
 .overflowContent{
   max-width: 80vw;
-  max-height: 80vh;
+  max-height: 75vh;
   overflow-x: auto;
   white-space: nowrap;
 }
 
 .overflowContent::-webkit-scrollbar {
   height: 5px;
-  background-color: var(--clr2);
+  width: 5px;
+  background-color: var(--clr4);
   border-radius: 5px;
 }
 
@@ -81,13 +82,12 @@
 .assignment{
   display: inline-block;
   vertical-align: top;
-  width: 270px;
-  height: 400px;
-  margin-left: 30px;
-  background-color: var(--clr2);
-  border: dotted 3px var(--clr3);
+  width: 370px;
   border-radius: 5px;
-  margin-bottom: 5px;
+  min-height: 470px;
+  margin-left: 30px;
+  padding-bottom: 10px;
+  background-color: var(--clr2);
   position: relative;
 }
 
@@ -98,8 +98,7 @@
 .assignmentName{
   width: 75%;
   height: 30px;
-  /*background-color: var(--clr3);*/
-  border-bottom: solid 2px var(--clr3);
+  border-bottom: dotted 2px var(--clr3);
   padding-bottom: 20px;
   color: white;
   margin: 10px auto;
@@ -120,6 +119,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
   cursor: pointer;
 }
 
@@ -133,10 +133,9 @@
   margin-top: 10px;
   padding-right: 5px;
   border-radius: 5px;
-  background-color: var(--clr3);
+  background-color: var(--clr2-1);
   color: white;
   font-size: 18px;
-  /* overflow-x: auto; */
   position: relative;
   z-index: 2;
 }
@@ -146,14 +145,11 @@
   height: 10px;
   background-color: var(--clr1);
   border-radius: 5px;
-  /*height: 5px;*/
 }
-
 
 .checkBox{
   min-width: 25px;
   min-height: 25px;
-  /*background-color: black;*/
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 50%;
@@ -170,9 +166,14 @@
 }
 
 .boxCheckStyleParent{
+  animation: checkAnimation 1s 1;
   filter: grayscale(70%);
 }
 
+@keyframes checkAnimation {
+  from {filter: grayscale(0%);}
+  to {filter: grayscale(70%);}
+}
 
 /*Display on hover*/
 .displayHover{
@@ -189,11 +190,17 @@
   height: 30px;
   text-align: center;
   line-height: 30px;
-  left: 55px;
   position: absolute;
+  left: 55px;
   border-radius: 5px;
   background-color: var(--clr3);
   font-size: 15px;
+  animation: hoverAnimation 0.5s 1;
+}
+
+@keyframes hoverAnimation {
+  from {top: -50px;}
+  to {top: 10px;}
 }
 
 .addToDo:hover .displayHoverTask{
@@ -202,12 +209,18 @@
   height: 30px;
   text-align: center;
   line-height: 30px;
-  right: 58px;
-  top: 15px;
+  left: 15%;
+  top: 6px;
   position: absolute;
   border-radius: 5px;
   background-color: var(--clr3);
   font-size: 15px;
+  animation: hoverAnimationTask 0.5s 1;
+}
+
+@keyframes hoverAnimationTask {
+  from {left: -20%;}
+  to {left: 15%;}
 }
 
 /*Tag*/
@@ -221,13 +234,12 @@
   font-family: 'Lobster', cursive;
 }
 
-
 /* Delete buttons */
 .deleteBox{
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: var(--clr4);
+  background-color: var(--clr6);
   font-size: 13px;
   font-weight: 800;
   display: flex;
@@ -235,15 +247,15 @@
   justify-content: center;
   cursor: pointer;
   position: absolute;
-  left: 95%;
-  bottom: 30px;
+  left: 96%;
+  bottom: 25px;
 }
 
 .deleteAssignment{
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: var(--clr4);
+  background-color: var(--clr6);
   color: white;
   font-size: 13px;
   font-weight: 800;
@@ -252,6 +264,6 @@
   justify-content: center;
   cursor: pointer;
   position: absolute;
-  left: 93%;
-  bottom: 95.5%;
+  bottom: 95%;
+  right: 0%;
 }
